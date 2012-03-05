@@ -26,4 +26,9 @@ describe "LayoutLinks" do
     get '/news'
     response.should have_selector('title', :content => "News")
   end
+
+  it "should have a Signup page at '/signup'" do
+    get '/signup'
+    response.should have_selector('title', :content => "Signup")
+  end
 end

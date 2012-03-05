@@ -1,11 +1,14 @@
 ElectronichomecareAdmin::Application.routes.draw do
 	
+  get "accounts/new"
+
 	root :to => 'pages#home'
 	
   match '/about',   :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/help',    :to => 'pages#help'
   match '/news',    :to => 'pages#news'
+	match '/signup', 	:to => 'accounts#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
